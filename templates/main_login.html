@@ -10,7 +10,7 @@
         }
         #main {
             width: 30%;
-            height: 500px;
+            height: 300px;
             border: 5px solid black;
             margin: auto;
             margin-top: 10%;
@@ -50,34 +50,24 @@
 </head>
 <body>
 {% csrf_token %}
-<h2 align="center">کد حاوی فعال سازی به ایمیل شما ارسال خواهد شد</h2>
 <h1 align = "center" style = "color : red ; text-transform: capitalize">{{ log_in }}</h1>
 <div id="main">
-    <h2 align="center">signup</h2>
+    <h2 align="center">login</h2>
     <div id="main2">
         <form name="form" method="post">
             {% csrf_token %}
-            <input name="username" type="text" autocomplete="on" placeholder="username">
+            <input name="name" type="text" autocomplete="on" placeholder="username">
             <small dir="rtl">نام کاربری خود را وارد کنید</small>
             {% csrf_token %}
-            <input name="name" type="text" autocomplete="on" placeholder="name">
-            <small dir="rtl">نام خود را وارد کنید</small>
-            {% csrf_token %}
-            <input name="lastname" type="text" autocomplete="on" placeholder="lastname">
-            <small dir="rtl">نام خانوادگی خود را وارد کنید</small>
-            {% csrf_token %}
             <input name="email" type="email" autocomplete="on" placeholder="email">
-            <small dir="rtl">ایمیل خود را وارد کنید(حتما باید gmail باشد)</small>
+            <small dir="rtl">ایمیل خود را وارد کنید</small>
             {% csrf_token %}
             <input name="password" type="password" autocomplete="on" placeholder="password">
             <small dir="rtl">پسورد خود را وارد کنید کنید</small>
-            {% csrf_token %}
-            <input name="password2" type="password" autocomplete="on" placeholder="re-password">
-            <small dir="rtl">پسورد خود را تکرار کنید</small>
             <br>
             <div id="main3">
                 <div style="margin: auto ; width: 50%">
-                    <button type="submit" formmethod="post">signup</button>
+                    <button type="submit" formmethod="post">login</button>
                 </div>
             </div>
         </form>
