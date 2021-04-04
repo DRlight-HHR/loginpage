@@ -4,7 +4,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
-from django.contrib.staticfiles import *
+from django.core.files.storage import FileSystemStorage
+import requests as r_s
 
 users = get_user_model()
 number = [52608088, 0]
@@ -98,6 +99,27 @@ def home(request):
     if request.user.is_authenticated is not True:
         return redirect('/login')
 
+    if request.method == 'POST':
+        '''if request.FILES['file']:
+            file = request.FILES['file']
+            print(file.name)
+            print(file.size)
+            FS = FileSystemStorage()
+            A =FS.save(file.name, file)
+            print(FS.url(A))
+            return HttpResponse(FS.url(A))'''
+        if request.POST.get('link') is not None:
+            link = request.POST.get('link')
+            file_Link = r_s.get(link)
+            from random import randrange
+            z = request.POST.get('format')
+            x = randrange(12334, 23426356)
+            if z is None:
+                z = 'zip'
+            y = '{}.{}'.format(x, z)
+            open('upload_f_ROOT/{}'.format(y), 'wb').write(file_Link.content)
+            FS = FileSystemStorage()
+            return HttpResponse(FS.url(y))
     return render(request, 'home.html')
 
 

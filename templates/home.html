@@ -1,23 +1,57 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}">
     <style>
-        #bar {
-            width: auto;
-            height: 35px;
-            background-color: black;
-            position: sticky;
-            top: 0;
+        @font-face {
+            font-family: 'mirza';
+            src: url("{% static 'font/Mirza-Medium.ttf' %}");
         }
     </style>
 </head>
-<body>
-<div id="bar">
-<p align="center"><a href="http://127.0.0.1:8002/out" style="color: blue">longout</a></p>
-</div>
-<h1>welcome to the home</h1>
-<a href="Best%20Relax%20Music%2001.mp3" type="_blank" download="best-music"><p align="center">click for download music</p></a>
+<body >
+    <div id="bar">
+        <p align="center"><a href="http://127.0.0.1:8002/out" style="color: blue">longout</a></p>
+    </div>
+
+    <div id="tab">
+        <img src="{% static 'image/9 Squares Round 2.gif' %}" id="background">
+        <p style="z-index: 1">welcomed</p>
+    </div>
+
+    <div id="main-left">
+    </div>
+
+    <div id="main-right"></div>
+
+    <div id="main" dir="rtl">
+        <div id="main_main" style="font-family: mirza;">
+            <h2 dir="ltr">action</h2>
+            <p>کاربرد ویژگی action در سند html
+صفت action یک صفت اختصاصی برای تگ form در سند html است.
+در حقیقت ویژگی action وقتی که فرم به سمت سرور ارسال می شود، عملی را نشان می دهد.
+به عبارت دیگر action یک آدرس اینترنتی از صفحه مقصد است، که فرم برای اعتبارسنجی سمت سرور به آن ارسال می شود.</p>
+            <br>
+            <h2 dir="ltr">python</h2>
+            <p>پایتون یک زبان برنامه‌نویسی شیءگرا، تفسیری، سطح بالا، و همه منظوره است، که خیدو فان روسوم آن را طراحی کرده‌است، و اولین بار در سال ۱۹۹۱ منتشر شده‌است. فلسفه اصلی طراحی پایتون «خوانایی بالای کد» است و نویسه‌های فاصله خالی در آن معنادار هستند و مکرر استفاده می‌شوند.</p>
+            <img src="{% static 'image/Python_DJango_KStu0Qv.jpg' %}" width="100%" height="400" align="center" style = "border-radius: 15px">
+            <br>
+            <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="file">
+            <button type="submit" formmethod="post">send</button>
+            </form>
+            <br>
+            <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="link" placeholder="enter link here">
+            <input type="text" name="format" placeholder="enter your name of format for example zip/png/mp4">
+            <button type="submit" formmethod="post">send</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

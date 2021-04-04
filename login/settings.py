@@ -120,6 +120,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "file_M",
+]
+
+STATIC_ROOT = BASE_DIR / "file_M_ROOT"
+
+MEDIA_URL = '/upload_file/'
+
+MEDIA_ROOT = BASE_DIR / 'upload_f_ROOT'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True

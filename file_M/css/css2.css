@@ -1,0 +1,10 @@
+@font-face{  
+    font-family: myFont;
+    src: url("font/Far_RoyaBd.ttf")}
+    
+.mytest4 {color:  #e6fff5; border: 5px ; border-color:  #00b36b ; background-color: #00331f ; font-size: medium  ; font-family: "Calisto MT" ; height: auto ; width: auto ; text-align: center; position: sticky; top: 0;}
+.mytest5 {border-color: black ;  border: 10px ; text-align: center;}
+.mytest6 { background-image: url("images/Pinterest.gif")  ; background-color:  #8f00b3; height: 220px  ; width: auto ; padding: 20px ; border-radius: 15px 50px 30px ; box-shadow: 20px 20px 50px grey}
+.main {border-color: black; border: 1px; padding: 10px; width: 65%; height: auto; font-family: myFont; text-align: right; box-shadow: 20px 20px 50px 10px pink; border-radius: 2em 1em 4em / 0.5em 3em;float: left; margin-left: 15px; position: relative;}
+.main-right {border: 5px; border-radius: 15px; width: 25%; position: relative;border-color: black; padding: 10px; float: right; box-shadow: 20px 20px 50px 15px grey; text-align: center; font-family:  'Raleway', sans-serif;}
+.footer {border: 10px ; border-color: black; background-color: black; border-radius: 25px; width: auto; height: 200px; padding: 20px; color: #00331f;}

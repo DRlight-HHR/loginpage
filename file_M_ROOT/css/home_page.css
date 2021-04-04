@@ -1,0 +1,15 @@
+{% load static %}
+@font-face {
+    font-family: 'amir';
+    src: url("{% static 'font/NewTegomin-Regular.ttf' %}");
+}
+#bar {
+    width: auto;
+    height: 35px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+body {
+    font-family: amir;
+}
